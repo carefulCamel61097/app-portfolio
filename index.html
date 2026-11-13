@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thabiso — Apps</title>
+  <meta name="description" content="Apps designed and built by Thabiso, using an AI-assisted workflow: SportsPort, ConvoGo and Zouzou.">
+  <link rel="icon" href="assets/icons/sportsport.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!--
+  HOW TO EDIT
+  - Anything wrapped in <mark class="todo">…</mark> is placeholder text. Replace it and remove the <mark> tags.
+  - To hide the yellow highlighting while previewing, add class="no-todo" to <body>.
+-->
+
+<header class="intro">
+  <p class="kicker">App portfolio</p>
+  <h1>Thabiso</h1>
+  <p class="lede">
+    <mark class="todo">I design and build mobile apps with an AI-assisted workflow — from a rough idea to an app in the store.</mark>
+  </p>
+  <p class="bio">
+    <mark class="todo">Physicist turned app builder, based in Chiang Mai, Thailand. Since February 2026 I've shipped three apps, each built for a real person with a real problem — including me. Below is what they are, and what building them taught me.</mark>
+  </p>
+  <nav class="contact" aria-label="Contact">
+    <a href="mailto:epema.thabiso@gmail.com">Email me</a>
+    <a href="https://github.com/carefulCamel61097">GitHub</a>
+    <a href="#ai">How I work with AI ↓</a>
+  </nav>
+</header>
+
+<main>
+  <section class="folder" aria-label="Apps">
+    <div class="tabs" role="tablist" aria-label="Choose an app">
+      <button class="tab" role="tab" id="tab-sportsport" aria-controls="sportsport" aria-selected="true" style="--accent: var(--sp)">
+        <img src="assets/icons/sportsport.png" alt="" width="64" height="64">
+        <span>SportsPort</span>
+      </button>
+      <button class="tab" role="tab" id="tab-convogo" aria-controls="convogo" aria-selected="false" tabindex="-1" style="--accent: var(--cg)">
+        <img src="assets/icons/convogo.png" alt="" width="64" height="64">
+        <span>ConvoGo</span>
+      </button>
+      <button class="tab" role="tab" id="tab-zouzou" aria-controls="zouzou" aria-selected="false" tabindex="-1" style="--accent: var(--zz)">
+        <img src="assets/icons/zouzou.png" alt="" width="64" height="64">
+        <span>Zouzou</span>
+      </button>
+    </div>
+
+    <!-- ============ SPORTSPORT ============ -->
+    <article class="page" role="tabpanel" id="sportsport" aria-labelledby="tab-sportsport" style="--accent: var(--sp)">
+      <div class="page-head">
+        <h2>SportsPort</h2>
+        <p class="tagline">Live tournament management for amateur badminton.</p>
+        <ul class="meta">
+          <li class="status status--live">Web app live · Android in testing</li>
+          <li>Flutter · Firebase</li>
+          <li>English · Thai · Chinese</li>
+        </ul>
+        <p class="links">
+          <a href="https://sportsportapp.com">Try the web app</a>
+          <a href="https://youtu.be/9euVIUTMIzY">Watch the demos</a>
+          <a href="https://github.com/carefulCamel61097/sportsport-case-study">Full case study</a>
+        </p>
+      </div>
+
+      <div class="gallery" tabindex="0" aria-label="SportsPort screenshots">
+        <figure class="shot shot--wide"><img src="assets/screenshots/sportsport-flow-b-progress.png" alt="Organizer dashboard showing tournament progress" loading="lazy"><figcaption>Organizer dashboard (web)</figcaption></figure>
+        <figure class="shot"><img src="assets/screenshots/sportsport-flow-c-standings.png" alt="Live standings on a phone" loading="lazy"><figcaption>Live standings</figcaption></figure>
+        <figure class="shot"><img src="assets/screenshots/sportsport-flow-c-knockout.png" alt="Knockout bracket with a highlighted team path" loading="lazy"><figcaption>Knockout bracket</figcaption></figure>
+        <figure class="shot"><img src="assets/screenshots/sportsport-flow-c-followed.png" alt="Personal view of followed players" loading="lazy"><figcaption>Your matches</figcaption></figure>
+        <figure class="shot shot--wide"><img src="assets/screenshots/sportsport-flow-b-map.png" alt="Map view showing the whole tournament on one canvas" loading="lazy"><figcaption>Whole tournament at a glance</figcaption></figure>
+      </div>
+
+      <div class="cols">
+        <section>
+          <h3>The app</h3>
+          <p>Amateur badminton tournaments in Chiang Mai run on Google Sheets. Players refresh a spreadsheet between matches to find out when and where they play next. SportsPort keeps the sign-up flow organizers already use and adds what spreadsheets can't do: live standings on every phone, real-time match tracking, and a schedule that adjusts as the day runs.</p>
+          <ul class="ticks">
+            <li>Imports the Google Forms registration sheet directly</li>
+            <li>Group + knockout, Swiss + knockout, or straight knockout</li>
+            <li>Results update on every device instantly</li>
+            <li>Remaining-time estimate based on actual match pace</li>
+            <li>Players join by scanning a QR code — no install, no account</li>
+          </ul>
+        </section>
+        <section>
+          <h3>What it shows about my experience</h3>
+          <ul class="ticks">
+            <li>A full product: web dashboard and mobile app from one codebase</li>
+            <li>Real-time data, user accounts, roles and permissions</li>
+            <li>Tested end to end on two real past tournaments</li>
+            <li>Brand, landing page and app-store listing done myself</li>
+            <li><mark class="todo">Idea to working web app in about X weeks</mark></li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="decisions">
+        <h3>Three decisions that shaped it</h3>
+        <ol>
+          <li>
+            <h4>Two screens, one codebase</h4>
+            <p>Organizers work from a laptop, players from a phone. Instead of one layout stretched to fit both, each gets an interface designed for how they actually use it, sharing the same logic underneath.</p>
+          </li>
+          <li>
+            <h4>Keep the "one page" feeling</h4>
+            <p>Organizers coming from spreadsheets look for the single sheet that shows everything. A map view and a printable PDF give them exactly that, alongside the interactive app.</p>
+          </li>
+          <li>
+            <h4>Nothing in the way of joining</h4>
+            <p>At a casual Saturday tournament, nobody installs an app. So you don't have to: scan a QR code, see your matches. Accounts only when you want to do more.</p>
+          </li>
+        </ol>
+      </section>
+
+      <aside class="ai-note">
+        <h3>How AI helped here</h3>
+        <p><mark class="todo">One concrete example: a hard problem in SportsPort, how you and Claude worked through it, and what you decided yourself. Two or three sentences.</mark></p>
+      </aside>
+
+      <p class="next"><strong>What's next:</strong> <mark class="todo">From 2027 I'll be running my own badminton tournaments in Chiang Mai on SportsPort.</mark></p>
+    </article>
+
+    <!-- ============ CONVOGO ============ -->
+    <article class="page" role="tabpanel" id="convogo" aria-labelledby="tab-convogo" style="--accent: var(--cg)" hidden>
+      <div class="page-head">
+        <h2>ConvoGo</h2>
+        <p class="tagline">A face-to-face translator for two people and one phone.</p>
+        <ul class="meta">
+          <li class="status status--live">In the App Store &amp; Google Play</li>
+          <li>Flutter · Cloudflare Workers</li>
+          <li>iOS · Android</li>
+        </ul>
+        <p class="links">
+          <a href="#"><mark class="todo">App Store link</mark></a>
+          <a href="#"><mark class="todo">Google Play link</mark></a>
+        </p>
+      </div>
+
+      <div class="gallery" tabindex="0" aria-label="ConvoGo screenshots">
+        <figure class="shot"><img src="assets/screenshots/convogo-conversation.jpeg" alt="A two-language conversation shown as chat bubbles" loading="lazy"><figcaption>A conversation, both languages</figcaption></figure>
+        <figure class="shot"><img src="assets/screenshots/convogo-picklanguages.jpeg" alt="Choosing the two languages" loading="lazy"><figcaption>Pick two languages</figcaption></figure>
+        <figure class="shot"><img src="assets/screenshots/convogo-settings.jpeg" alt="Settings screen" loading="lazy"><figcaption>Settings</figcaption></figure>
+      </div>
+
+      <div class="cols">
+        <section>
+          <h3>The app</h3>
+          <p>Two people standing face to face who don't share a language. One holds the phone, both speak, and the app shows what was said in both languages as a simple chat. No record buttons, no robot voice reading things out — just switch speaker and keep talking.</p>
+          <p class="aside-line"><mark class="todo">It started as a fun experiment and turned into a complete app.</mark></p>
+          <ul class="ticks">
+            <li>No buttons per turn: switching speaker is the only action</li>
+            <li>Built to use with one thumb</li>
+            <li>Reading, not listening: works in noisy places</li>
+          </ul>
+        </section>
+        <section>
+          <h3>What it shows about my experience</h3>
+          <ul class="ticks">
+            <li>Published on both the App Store and Google Play</li>
+            <li>Speech recognition and translation working together live</li>
+            <li>A small backend that keeps API keys off the phone</li>
+            <li>Designing by removing things, not adding them</li>
+            <li><mark class="todo">Built in about X weeks</mark></li>
+          </ul>
+        </section>
+      </div>
+
+      <aside class="ai-note">
+        <h3>How AI helped here</h3>
+        <p><mark class="todo">One concrete example from building ConvoGo.</mark></p>
+      </aside>
+    </article>
+
+    <!-- ============ ZOUZOU ============ -->
+    <article class="page" role="tabpanel" id="zouzou" aria-labelledby="tab-zouzou" style="--accent: var(--zz)" hidden>
+      <div class="page-head">
+        <h2>Zouzou</h2>
+        <p class="tagline">One app for a personal trainer and her clients.</p>
+        <ul class="meta">
+          <li class="status status--wip">In progress</li>
+          <li>Flutter · Firebase</li>
+          <li>Chinese · English</li>
+        </ul>
+      </div>
+
+      <div class="gallery" tabindex="0" aria-label="Zouzou images">
+        <figure class="shot shot--wide"><img src="assets/screenshots/zouzou-feature.png" alt="Zouzou logo" loading="lazy"><figcaption>Brand</figcaption></figure>
+        <figure class="shot shot--empty"><div><mark class="todo">Screenshot</mark></div><figcaption>Trainer view</figcaption></figure>
+        <figure class="shot shot--empty"><div><mark class="todo">Screenshot</mark></div><figcaption>Client view</figcaption></figure>
+      </div>
+
+      <div class="cols">
+        <section>
+          <h3>The app</h3>
+          <p>Built for a personal trainer in Chiang Mai whose clients are almost all Chinese. Trainer and clients use the same app: she plans workouts and manages session packs, they follow their workouts, track progress and book sessions.</p>
+          <ul class="ticks">
+            <li>Two roles, one shared app</li>
+            <li>Built around session packs, how trainers here actually sell</li>
+            <li>Chinese-first, not translated afterwards</li>
+          </ul>
+        </section>
+        <section>
+          <h3>What it shows about my experience</h3>
+          <ul class="ticks">
+            <li>Building for a client: her workflow first, not mine</li>
+            <li>Designing for a different culture and language</li>
+            <li>Turning interviews into a scoped plan and roadmap</li>
+            <li><mark class="todo">Anything else you want to highlight</mark></li>
+          </ul>
+        </section>
+      </div>
+
+      <aside class="ai-note">
+        <h3>How AI helped here</h3>
+        <p><mark class="todo">One concrete example from building Zouzou.</mark></p>
+      </aside>
+
+      <p class="next"><strong>What's next:</strong> <mark class="todo">Testing with her clients now. If it works well, opening it up to other trainers.</mark></p>
+    </article>
+  </section>
+
+  <!-- ============ AI SECTION ============ -->
+  <section class="ai" id="ai" aria-labelledby="ai-title">
+    <p class="kicker">The way I work</p>
+    <h2 id="ai-title">How I build with AI</h2>
+    <p class="ai-lede"><mark class="todo">One or two sentences: your core view. What do you do differently from most people using AI, and why is that better for the person you're building for?</mark></p>
+
+    <ol class="process">
+      <li><span>01</span><h3>Understand</h3><p><mark class="todo">Who is it for, what's the real problem. Vision and scope written down before any code.</mark></p></li>
+      <li><span>02</span><h3>Plan &amp; critique</h3><p><mark class="todo">A written plan, then challenged from several angles before building.</mark></p></li>
+      <li><span>03</span><h3>Build</h3><p><mark class="todo">Claude writes the code in small steps; I steer, decide and review.</mark></p></li>
+      <li><span>04</span><h3>Test</h3><p><mark class="todo">Automated tests plus real devices and real data.</mark></p></li>
+      <li><span>05</span><h3>Ship</h3><p><mark class="todo">Store listings, branding, landing page.</mark></p></li>
+    </ol>
+
+    <div class="cols cols--ai">
+      <section>
+        <h3>Why I think this is the right way</h3>
+        <p><mark class="todo">Your argument. E.g. speed and cost for clients, you stay responsible for every decision, quality you can check.</mark></p>
+      </section>
+      <section>
+        <h3>What AI doesn't do for me</h3>
+        <p><mark class="todo">The honest part: where AI falls short, and how your process catches it.</mark></p>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p><mark class="todo">Have an app idea? I'd love to hear about it.</mark></p>
+  <p><a href="mailto:epema.thabiso@gmail.com">epema.thabiso@gmail.com</a> · Chiang Mai, Thailand</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
