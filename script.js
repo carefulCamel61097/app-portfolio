@@ -1,3 +1,14 @@
+// Light / dark toggle (dark is the default; the choice is remembered per browser)
+const root = document.documentElement;
+const toggle = document.querySelector('.theme-toggle');
+const label = () => { toggle.textContent = root.dataset.theme === 'light' ? 'Dark mode' : 'Light mode'; };
+label();
+toggle.addEventListener('click', () => {
+  root.dataset.theme = root.dataset.theme === 'light' ? 'dark' : 'light';
+  try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+  label();
+});
+
 // Folder tabs: click, keyboard (arrows/Home/End) and #hash links (e.g. index.html#zouzou)
 const tabs = [...document.querySelectorAll('[role="tab"]')];
 

@@ -1,37 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Thabiso — Apps (work in progress)</title>
-  <meta name="description" content="Apps designed and built by Thabiso, using an AI-assisted workflow: SportsPort, ConvoGo and Zouzou.">
+  <title>Thabiso, AI-supported software engineer (work in progress)</title>
+  <meta name="description" content="Apps designed and built by Thabiso with AI: SportsPort, ConvoGo and Zouzou.">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
   <link rel="icon" href="assets/icons/sportsport.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!--
   HOW TO EDIT
-  - Anything wrapped in <mark class="todo">…</mark> is placeholder text. Replace it and remove the <mark> tags.
-  - To hide the yellow highlighting while previewing, add class="no-todo" to <body>.
+  - Anything wrapped in <mark class="todo">...</mark> is placeholder text. Replace it and remove the <mark> tags.
+  - To hide the highlighting while previewing, add class="no-todo" to <body>.
+  - See AI_TELLS.md for things to avoid so the page doesn't read as AI-made.
 -->
 
 <header class="intro">
-  <p class="kicker">App portfolio <span class="wip">Work in progress</span></p>
+  <button class="theme-toggle" type="button" aria-label="Switch colour theme">Light mode</button>
   <h1>Thabiso</h1>
-  <p class="lede">
-    <mark class="todo">I design and build mobile apps with an AI-assisted workflow — from a rough idea to an app in the store.</mark>
-  </p>
+  <p class="role">AI-supported software engineer</p>
   <p class="bio">
-    <mark class="todo">Physicist turned app builder, based in Chiang Mai, Thailand. Since February 2026 I've shipped three apps, each built for a real person with a real problem — including me. Below is what they are, and what building them taught me.</mark>
+    I studied physics, worked as a data analyst, and now I build apps.
+    <mark class="todo">Since February 2026 I've built three of them, from first idea to an app in the store, each for a real person with a real problem (one of them was me).</mark>
+    This page is still a work in progress.
   </p>
   <nav class="contact" aria-label="Contact">
     <a href="mailto:epema.thabiso@gmail.com">Email me</a>
     <a href="https://github.com/carefulCamel61097">GitHub</a>
-    <a href="#ai">How I work with AI ↓</a>
+    <a href="#ai">How I work with AI</a>
   </nav>
 </header>
 
@@ -57,11 +61,7 @@
       <div class="page-head">
         <h2>SportsPort</h2>
         <p class="tagline">Live tournament management for amateur badminton.</p>
-        <ul class="meta">
-          <li class="status status--live">Web app live · Android in testing</li>
-          <li>Flutter · Firebase</li>
-          <li>English · Thai · Chinese</li>
-        </ul>
+        <p class="facts">The web app is live and the Android app is in testing. Built with Flutter and Firebase, available in English, Thai and Chinese.</p>
         <p class="links">
           <a href="https://sportsportapp.com">Try the web app</a>
           <a href="https://youtu.be/9euVIUTMIzY">Watch the demos</a>
@@ -80,13 +80,13 @@
       <div class="cols">
         <section>
           <h3>The app</h3>
-          <p>Amateur badminton tournaments in Chiang Mai run on Google Sheets. Players refresh a spreadsheet between matches to find out when and where they play next. SportsPort keeps the sign-up flow organizers already use and adds what spreadsheets can't do: live standings on every phone, real-time match tracking, and a schedule that adjusts as the day runs.</p>
+          <p>Amateur badminton tournaments here run on Google Sheets. Players refresh a spreadsheet between matches to find out when and where they play next. SportsPort keeps the sign-up flow organizers already use and adds what spreadsheets can't do: live standings on every phone, real-time match tracking, and a schedule that adjusts as the day runs.</p>
           <ul class="ticks">
             <li>Imports the Google Forms registration sheet directly</li>
             <li>Group + knockout, Swiss + knockout, or straight knockout</li>
             <li>Results update on every device instantly</li>
             <li>Remaining-time estimate based on actual match pace</li>
-            <li>Players join by scanning a QR code — no install, no account</li>
+            <li>Players join by scanning a QR code, no install or account needed</li>
           </ul>
         </section>
         <section>
@@ -94,9 +94,9 @@
           <ul class="ticks">
             <li>A full product: web dashboard and mobile app from one codebase</li>
             <li>Real-time data, user accounts, roles and permissions</li>
-            <li>Tested end to end on two real past tournaments</li>
+            <li>Tested by importing the complete data of two past tournaments that were run on spreadsheets</li>
             <li>Brand, landing page and app-store listing done myself</li>
-            <li><mark class="todo">Idea to working web app in about X weeks</mark></li>
+            <li><mark class="todo">From first idea to a working web app in about X weeks (fill in, or delete this line)</mark></li>
           </ul>
         </section>
       </div>
@@ -121,10 +121,10 @@
 
       <aside class="ai-note">
         <h3>How AI helped here</h3>
-        <p><mark class="todo">One concrete example: a hard problem in SportsPort, how you and Claude worked through it, and what you decided yourself. Two or three sentences.</mark></p>
+        <p><mark class="todo">Draft, please check: From playing in tournaments I knew organizers constantly fix names and registrations, even halfway through the day. I made that a requirement. Claude proposed the engineering answer: matches only store player IDs, and names are looked up when they're shown. So the player list can be edited at any time without breaking a single result.</mark></p>
       </aside>
 
-      <p class="next"><strong>What's next:</strong> <mark class="todo">From 2027 I'll be running my own badminton tournaments in Chiang Mai on SportsPort.</mark></p>
+      <p class="next"><mark class="todo">What's next: from 2027 I'll be running my own badminton tournaments on SportsPort.</mark></p>
     </article>
 
     <!-- ============ CONVOGO ============ -->
@@ -132,11 +132,7 @@
       <div class="page-head">
         <h2>ConvoGo</h2>
         <p class="tagline">A face-to-face translator for two people and one phone.</p>
-        <ul class="meta">
-          <li class="status status--live">In the App Store &amp; Google Play</li>
-          <li>Flutter · Cloudflare Workers</li>
-          <li>iOS · Android</li>
-        </ul>
+        <p class="facts">Available in the App Store and on Google Play. Built with Flutter, with a small Cloudflare Workers backend.</p>
         <p class="links">
           <a href="#"><mark class="todo">App Store link</mark></a>
           <a href="#"><mark class="todo">Google Play link</mark></a>
@@ -152,12 +148,12 @@
       <div class="cols">
         <section>
           <h3>The app</h3>
-          <p>Two people standing face to face who don't share a language. One holds the phone, both speak, and the app shows what was said in both languages as a simple chat. No record buttons, no robot voice reading things out — just switch speaker and keep talking.</p>
-          <p class="aside-line"><mark class="todo">It started as a fun experiment and turned into a complete app.</mark></p>
+          <p>Two people standing face to face who don't share a language. One holds the phone, both speak, and the app shows what was said in both languages as a simple chat. No record buttons and no robot voice reading things out. You switch speaker and keep talking.</p>
+          <p><mark class="todo">It started as a fun experiment and turned into a complete app.</mark></p>
           <ul class="ticks">
             <li>No buttons per turn: switching speaker is the only action</li>
             <li>Built to use with one thumb</li>
-            <li>Reading, not listening: works in noisy places</li>
+            <li>You read instead of listen, so it works in noisy places</li>
           </ul>
         </section>
         <section>
@@ -166,8 +162,7 @@
             <li>Published on both the App Store and Google Play</li>
             <li>Speech recognition and translation working together live</li>
             <li>A small backend that keeps API keys off the phone</li>
-            <li>Designing by removing things, not adding them</li>
-            <li><mark class="todo">Built in about X weeks</mark></li>
+            <li>Designing by removing things instead of adding them</li>
           </ul>
         </section>
       </div>
@@ -183,11 +178,7 @@
       <div class="page-head">
         <h2>Zouzou</h2>
         <p class="tagline">One app for a personal trainer and her clients.</p>
-        <ul class="meta">
-          <li class="status status--wip">In progress</li>
-          <li>Flutter · Firebase</li>
-          <li>Chinese · English</li>
-        </ul>
+        <p class="facts">In progress. Built with Flutter and Firebase, in Chinese and English.</p>
       </div>
 
       <div class="gallery" tabindex="0" aria-label="Zouzou images">
@@ -199,11 +190,11 @@
       <div class="cols">
         <section>
           <h3>The app</h3>
-          <p>Built for a personal trainer in Chiang Mai whose clients are almost all Chinese. Trainer and clients use the same app: she plans workouts and manages session packs, they follow their workouts, track progress and book sessions.</p>
+          <p>Built for a personal trainer whose clients are almost all Chinese. Trainer and clients use the same app: she plans workouts and manages session packs, they follow their workouts, track progress and book sessions.</p>
           <ul class="ticks">
             <li>Two roles, one shared app</li>
-            <li>Built around session packs, how trainers here actually sell</li>
-            <li>Chinese-first, not translated afterwards</li>
+            <li>Built around session packs, which is how trainers here actually sell</li>
+            <li>Designed in Chinese from the start, not translated afterwards</li>
           </ul>
         </section>
         <section>
@@ -211,7 +202,7 @@
           <ul class="ticks">
             <li>Building for a client: her workflow first, not mine</li>
             <li>Designing for a different culture and language</li>
-            <li>Turning interviews into a scoped plan and roadmap</li>
+            <li>Turning conversations into a scoped plan and roadmap</li>
             <li><mark class="todo">Anything else you want to highlight</mark></li>
           </ul>
         </section>
@@ -222,40 +213,37 @@
         <p><mark class="todo">One concrete example from building Zouzou.</mark></p>
       </aside>
 
-      <p class="next"><strong>What's next:</strong> <mark class="todo">Testing with her clients now. If it works well, opening it up to other trainers.</mark></p>
+      <p class="next"><mark class="todo">What's next: testing with her clients now. If it works well, opening it up to other trainers.</mark></p>
     </article>
   </section>
 
   <!-- ============ AI SECTION ============ -->
   <section class="ai" id="ai" aria-labelledby="ai-title">
-    <p class="kicker">The way I work</p>
     <h2 id="ai-title">How I build with AI</h2>
-    <p class="ai-lede"><mark class="todo">One or two sentences: your core view. What do you do differently from most people using AI, and why is that better for the person you're building for?</mark></p>
+    <p class="ai-lede">I don't reinvent the way I work when I use AI. I look at how the work is already done, find the steps that follow a recipe, and let AI do the legwork on those steps. Then I check what comes out.</p>
 
-    <ol class="process">
-      <li><span>01</span><h3>Understand</h3><p><mark class="todo">Who is it for, what's the real problem. Vision and scope written down before any code.</mark></p></li>
-      <li><span>02</span><h3>Plan &amp; critique</h3><p><mark class="todo">A written plan, then challenged from several angles before building.</mark></p></li>
-      <li><span>03</span><h3>Build</h3><p><mark class="todo">Claude writes the code in small steps; I steer, decide and review.</mark></p></li>
-      <li><span>04</span><h3>Test</h3><p><mark class="todo">Automated tests plus real devices and real data.</mark></p></li>
-      <li><span>05</span><h3>Ship</h3><p><mark class="todo">Store listings, branding, landing page.</mark></p></li>
-    </ol>
-
-    <div class="cols cols--ai">
+    <div class="principles">
       <section>
-        <h3>Why I think this is the right way</h3>
-        <p><mark class="todo">Your argument. E.g. speed and cost for clients, you stay responsible for every decision, quality you can check.</mark></p>
+        <h3>Start from how you already work</h3>
+        <p>Most work has parts where you already know the recipe: the same steps, in the same order, every time. Those are the parts AI can take over. People often struggle to see where AI fits, but the answer is usually already in their own process. Write down the steps, have AI carry them out, and check the output until you trust it.</p>
       </section>
       <section>
-        <h3>What AI doesn't do for me</h3>
-        <p><mark class="todo">The honest part: where AI falls short, and how your process catches it.</mark></p>
+        <h3>Let each side do what it's good at</h3>
+        <p>AI is strongest where it has seen a lot of examples. Writing code, using Git, following good engineering practice: there's a huge amount of that online, and AI is often better at it than most people. But an app is more than code. Which direction should it go? What do users really want, and what would they pay for? How should it look and feel on screen? Those are judgment calls, and that's where I spend my time.</p>
+      </section>
+      <section>
+        <h3>Manage it like an engineer on your team</h3>
+        <p>I work with AI the way a manager works with a software engineer. I set the direction, ask the questions, and make sure it goes through the right steps: plan first, then build, then test and review. Even in areas where I'm not an expert myself, that process makes the AI find and fix its own mistakes.</p>
       </section>
     </div>
+
+    <p class="ai-more"><mark class="todo">More concrete examples to come.</mark></p>
   </section>
 </main>
 
 <footer class="foot">
   <p><mark class="todo">Have an app idea? I'd love to hear about it.</mark></p>
-  <p><a href="mailto:epema.thabiso@gmail.com">epema.thabiso@gmail.com</a> · Chiang Mai, Thailand</p>
+  <p><a href="mailto:epema.thabiso@gmail.com">epema.thabiso@gmail.com</a></p>
 </footer>
 
 <script src="script.js"></script>
