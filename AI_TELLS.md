@@ -54,6 +54,16 @@ A useful test: *would a person writing this by hand bother to add this element?*
 
 **Instead:** One solid, professional family used for everything, with hierarchy done through size and weight. This page now uses IBM Plex Sans.
 
+### 6. The editorial tag
+
+**Sign:** A clause bolted onto the end of a finished sentence that announces the sentence is important, instead of letting it be important. "Ordenen is iets anders dan filteren, *en het verschil is het hele punt*." Other shapes: "and that changes everything", "and that's the whole story", "en dat is precies waar het om draait", "which is exactly the point".
+
+**Why it looks AI:** The sentence was already complete. The tag adds no fact, no example and no consequence, so it reads as someone leaning over your shoulder telling you to be impressed. People writing about their own work state the thing and move on; they only spell out the significance when it isn't obvious, and then they spell it out with a reason rather than an adjective.
+
+**Instead:** Delete it. If the significance genuinely isn't obvious, replace the tag with the reason or the consequence: "Ordenen is iets anders dan filteren. Een filter verbergt documenten; een ordening zet ze op een plaats."
+
+**Related:** this is the same habit as "Not X, but Y" and the one-line slogan further down. All three decorate a claim instead of supporting it.
+
 ---
 
 ## Suspected (not confirmed yet)

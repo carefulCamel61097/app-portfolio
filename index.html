@@ -133,11 +133,11 @@
     <article class="page" role="tabpanel" id="convogo" aria-labelledby="tab-convogo" style="--accent: var(--cg)" hidden>
       <div class="page-head">
         <h2>ConvoGo</h2>
-        <p class="tagline">A face-to-face translator for two people and one phone.</p>
-        <p class="facts">Available in the App Store and on Google Play. Built with Flutter, with a small Cloudflare Workers backend.</p>
+        <p class="tagline">A translator for face-to-face conversations, and for chats in other apps.</p>
+        <p class="facts">Available in the App Store and on Google Play, now at version 1.2. Built with Flutter, with a small Cloudflare Workers backend for speech recognition and translation.</p>
         <p class="links">
-          <a href="#"><mark class="todo">App Store link</mark></a>
-          <a href="#"><mark class="todo">Google Play link</mark></a>
+          <a href="https://apps.apple.com/app/id6779847058">App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.carefulcamel61097.talkflip">Google Play</a>
         </p>
       </div>
 
@@ -151,19 +151,23 @@
         <section>
           <h3>The app</h3>
           <p>Two people standing face to face who don't share a language. One holds the phone, both speak, and the app shows what was said in both languages as a simple chat. No record buttons and no robot voice reading things out. You switch speaker and keep talking.</p>
+          <p>Version 1.2 added text mode for the other common situation: someone messages you in another language on WhatsApp, LINE or Messenger. Tap Paste to read their message in your language, type your reply in yours, and the translation is already copied, ready to paste back into the chat.</p>
           <p><mark class="todo">It started as a fun experiment and turned into a complete app.</mark></p>
           <ul class="ticks">
-            <li>No buttons per turn: switching speaker is the only action</li>
+            <li>Voice mode: switching speaker is the only action, no buttons per turn</li>
+            <li>Text mode: one tap to paste their message, your translation copied automatically</li>
+            <li>A read-back check shows what your translation means in your own language, so you can catch a bad translation before you send it</li>
+            <li>Conversations stay on your phone</li>
             <li>Built to use with one thumb</li>
-            <li>You read instead of listen, so it works in noisy places</li>
           </ul>
         </section>
         <section>
           <h3>What it shows about my experience</h3>
           <ul class="ticks">
-            <li>Published on both the App Store and Google Play</li>
-            <li>Speech recognition and translation working together live</li>
+            <li>Published on both the App Store and Google Play, and kept improving after launch</li>
+            <li>Live speech recognition in the cloud, with the phone's own recognizer as a fallback</li>
             <li>A small backend that keeps API keys off the phone</li>
+            <li>Adding a new mode without making the app more complicated</li>
             <li>Designing by removing things instead of adding them</li>
           </ul>
         </section>
